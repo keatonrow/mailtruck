@@ -23,7 +23,6 @@
   "author": "Keaton Row <no32@keatonrow.com>",
   "license": "MIT",
   "dependencies": {
-    "mime": "~1.2.9",
     "mustache": "~0.7.2",
     "validator": "~0.4.25",
     "mailchimp": "~0.9.5",
