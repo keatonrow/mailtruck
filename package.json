@@ -1,0 +1,33 @@
+{
+  "name": "mailtruck",
+  "version": "0.0.0",
+  "description": "POST route to email address",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ovaillancourt@github.com/keatonrow/mailtruck.git"
+  },
+  "keywords": [
+    "mail",
+    "truck",
+    "mandrill",
+    "mailchimp",
+    "keaton",
+    "row",
+    "post",
+    "email"
+  ],
+  "author": "Keaton Row <no32@keatonrow.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mime": "~1.2.9",
+    "mustache": "~0.7.2",
+    "validator": "~0.4.25",
+    "mailchimp": "~0.9.5",
+    "async": "~0.2.5",
+    "underscore": "~1.4.4"
+  }
+}
