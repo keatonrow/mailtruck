@@ -50,6 +50,7 @@ app.listen( 3000 );
 * Remove express route, generalize to any http request.
 * Make file deletion post-submit configurable.
 * Add back-end mimetype verification (whitelist/blacklist) for file uploads.
+* Make mailtruck-wide configuration available when requiring mailtruck (as function call).
 
 ##License
 
