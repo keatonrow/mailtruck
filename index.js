@@ -1,4 +1,3 @@
-var _u          = require( 'underscore' );
 var async       = require( 'async' );
 var Attachments = require( './lib/Attachments' );
 var Form        = require( './lib/Form' );
@@ -33,11 +32,16 @@ var MailTruck = {};
 
 MailTruck.route = function( to, options ){
 
+  //Default to empty object
+  options = options || {};
+
   //Load template files if overrides weren't set in the options.
   if( !options.template_subject ){ defaultTmpl( 'template_subject' ); }
   if( !options.template_content ){ defaultTmpl( 'template_content' ); }
 
-  options = _u.defaults( options, defaultConfig );
+  Object.getOwnPropertyNames( defaultConfig ).forEach( function( p ){
+    options[ p ] = options[ p ] || defaultConfig[ p ];
+  }); 
 
   //Express route
   return function mailtruckRoute( req, res, next ){
@@ -54,7 +58,7 @@ MailTruck.route = function( to, options ){
     };
 
     //Handle attachments
-    var filesData = Form.resolveScope( req.files, options.scope );
+    var filesData = Form.resolveScope( req.files || {}, options.scope );
     var files = Object.getOwnPropertyNames( filesData ).map( function( n ){
       return filesData[ n ];
     });
