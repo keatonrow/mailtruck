@@ -64,20 +64,15 @@ MailTruck.route = function( to, options ){
     });
 
     //Send file over
-    var attachments = [];
     async.waterfall([
       function( cb ){
         Attachments.prepareAll( files, cb );
       },
-
       function( attachments, cb ){
         Mail.send( to, context, attachments, options, cb );
       }
-    ], function( err, doc ){ 
-      if( err ){
-        console.error( err );
-      }
-      
+    ], function( err, result ){ 
+      if( err ){ console.error( err ); }
       res.redirect( options.redirect );
     });
   }
