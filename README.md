@@ -36,7 +36,7 @@ app.get( '/', function( req, res, next ){
   );
 });
 
-app.post( '/', mailtruck.route( 'olivier@keatonrow.com', { mandrillKey: "0ceb4b11-175e-4eb6-a315-f716edd8ba84" } ) );
+app.post( '/', mailtruck.route( 'olivier@keatonrow.com', { mandrillKey: "your-mandrill-key" } ) );
 
 app.listen( 3000 );
 
