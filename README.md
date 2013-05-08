@@ -45,6 +45,7 @@ app.listen( 3000 );
 
 ##Roadmap
 
+* Finish writing a proper documentation ( including form scopes, file uploads, template and dictionary ).
 * Support multiple email-sending backends.
 * Support multiple templating engines for rendering.
 * Remove express route, generalize to any http request.
