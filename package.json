@@ -1,6 +1,6 @@
 {
   "name": "mailtruck",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "POST route to email address",
   "main": "index.js",
   "scripts": {
